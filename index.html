@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <center>
-	    <img src="https://media.istockphoto.com/id/1225512206/it/vettoriale/benvenuto-striscione-tipografico-colorato.jpg?s=612x612&w=0&k=20&c=iTSnayq1uSwTp0b3yRmYnjci8_4R45nH2se68DgWFwA=" </>
-	    <h1> welcome to the registration page</h1>
-	</center>
+    <title>Registration Page</title>
 </head>
 <body>
-	<center>
-	<form method="POST" action="login.html">
-			username:--<input  type="text" name="user email"/>
-			<br></br>
-			
-			password:--<input type="password" name="user password"/>
-			<br></br>
-			
-			Email:--<input type="text" name="user email"/>
-			<br></br>
-			gender
-			<input type="radio" name="gender">Female
-			<input type="radio" name="gender">Male
-			<input type="radio" name="gender">Other
-			<br></br>
-			
-			
-			<textarea name="address" row="6" cols="60" height="64" weight="64">
-			write your address......
-			</textarea>
-			<br></br>
-			
-			Date and Time to Login
-			<input type="datetime-local" id="login_date" name="logintime">
-			<br></br>
-			
-			Blood Group
-			<select name="blood group" >
-			  <option value="A">A+</option>
-			  <option value="B">B+</option>
-			  <option value="C">A-</option>
-			  <option value="D">B-</option>
-			</select>
-			<br></br>
-			
-			
-			<input type="submit" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPf9mdEsJSEbYVTIQqt14RscK4Q09lkCQWlQ&usqp=CAU">
-			<input type="reset">
+    <center>
+        <img src="https://media.istockphoto.com/id/1225512206/it/vettoriale/benvenuto-striscione-tipografico-colorato.jpg?s=612x612&w=0&k=20&c=iTSnayq1uSwTp0b3yRmYnjci8_4R45nH2se68DgWFwA=" />
+        <h1> Welcome to the Registration Page</h1>
+    </center>
+    
+    <center>
+        <form method="POST" action="login.html" onsubmit="showSuccessMessage()">
+            username:--<input type="text" name="user email" /><br><br>
+            password:--<input type="password" name="user password" /><br><br>
+            Email:--<input type="text" name="user email" /><br><br>
+            Gender:
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Other">Other
+            <br><br>
+            <textarea name="address" rows="6" cols="60">Write your address......</textarea>
+            <br><br>
+            Date and Time to Login
+            <input type="datetime-local" id="login_date" name="logintime">
+            <br><br>
+            Blood Group
+            <select name="blood group">
+                <option value="A">A+</option>
+                <option value="B">B+</option>
+                <option value="C">A-</option>
+                <option value="D">B-</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+        
+        <div id="successMessage" style="display: none;">
+            <img src="https://cdn-icons-png.flaticon.com/512/6276/6276686.png" />
+            <h1>Successfully Submitted</h1>
+        </div>
+    </center>
 
-			
-	</form>
-	</center>
-	
+    <script>
+        function showSuccessMessage() {
+            // Display the success message and image
+            document.getElementById("successMessage").style.display = "block";
+            return false; // Prevent the form from submitting if needed
+        }
+    </script>
 </body>
 </html>
-
